@@ -20,7 +20,7 @@ pipeline{
         }
         stage("package"){
             steps{
-              sh 'package -DskipTests'  
+              sh 'maven package -DskipTests'  
             }
         }
     }
