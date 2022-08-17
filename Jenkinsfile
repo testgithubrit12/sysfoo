@@ -18,11 +18,12 @@ pipeline{
             steps{
                 sh 'mvn package -DskipTests'
             }
+            post{
+                 always {
+                      echo "This block always runs."
+                 }
+                }
         }
     }
 }
-post{
-  always {
-     echo "This block always runs."
-  }
-}
+
